@@ -76,14 +76,15 @@
     justify-content:center;
     padding-bottom:0;
     background:
-      radial-gradient(ellipse at 78% 30%, rgba(255,119,9,0.07), transparent 55%),
-      var(--black);
+      radial-gradient(ellipse at 78% 30%, rgba(255,119,9,0.09), transparent 55%),
+      var(--charcoal);
+    border-bottom:1px solid var(--line);
   }
   .hero-headline{
     font-size:clamp(36px,6vw,98px);
     max-width:1240px;
   }
-  .hero-headline .fade{opacity:1;}
+  .hero-headline .fade{opacity:1;color:var(--white);}
   .hero-sub{
     margin-top:36px;font-size:18px;max-width:460px;
     color:rgba(250,249,246,0.6);font-weight:400;line-height:1.55;
@@ -182,6 +183,44 @@
     html{scroll-behavior:auto;}
     .scroll-cue::after{animation:none;}
   }
+
+  /* ==========================================================
+     MOBILE-ONLY REFINEMENTS (<768px)
+     Scoped strictly below 768px so desktop and the existing
+     tablet breakpoints (820px/900px) are completely untouched.
+     Goal: headlines stay the dominant visual element; supporting
+     cards/boxes are visually quieter (narrower, less padding,
+     smaller type) so they read as secondary detail.
+     ========================================================== */
+  @media (max-width:768px){
+
+    /* Application cards: reduce their visual weight so the
+       headline above still reads as the dominant element */
+    .app-grid{
+      margin:0 5vw;
+      border-left:none;
+      border-right:none;
+    }
+    .app-cell{padding:24px 20px;}
+    .app-cell h3{font-size:16px;margin-bottom:8px;}
+    .app-cell p{font-size:12.5px;line-height:1.5;}
+    .app-cell .num{font-size:10px;margin-bottom:14px;}
+    #applications h2{margin-bottom:36px;}
+
+    /* Problem section cost boxes: same treatment, kept
+       narrower and quieter than the headline beside them */
+    .cost-boxes{margin:0 4vw;}
+    .cost-box{padding:16px 18px;}
+    .cost-box h4{font-size:15px;margin-top:6px;}
+    .cost-box p{font-size:12px;margin-top:6px;}
+
+    /* Diagrams shouldn't compete with the headline for
+       attention on a narrow screen */
+    .visual{max-width:260px;margin:0 auto;}
+
+    /* Supporting body copy stays clearly secondary to headlines */
+    .text p.detail{font-size:14.5px;}
+  }
 </style>
 </head>
 <body>
@@ -203,7 +242,6 @@
     <p class="hero-sub">Move ammonia. Produce hydrogen where it's needed.</p>
   </div>
   <div class="scroll-cue">Scroll</div>
-</section>
 </section>
 
 <!-- THE PROBLEM -->
@@ -269,7 +307,7 @@
 <section id="applications">
   <div class="inner">
     <span class="label">Applications</span>
-    <h2 class="reveal"><span style="color:var(--orange);">Industrial hydrogen.</span> Without the logistics.</h2>
+    <h2 class="reveal"><span style="color:var(--orange);">Industrial hydrogen.</span> <span style="color:var(--charcoal);">Without the logistics.</span></h2>
     <div class="app-grid">
       <div class="app-cell reveal"><span class="num">01</span><h3>Semiconductor &amp; electronics</h3><p>Continuous process hydrogen demand, delivered without a tube-trailer fleet.</p></div>
       <div class="app-cell reveal"><span class="num">02</span><h3>Metal &amp; heat treatment</h3><p>On-site cracking replaces scheduled gas deliveries for industrial furnaces.</p></div>
@@ -304,7 +342,7 @@
     <img class="future-logo reveal" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPwAAAFMCAYAAADvFtGmAAAD9klEQVR4nO3cMYrCYBCAUbPs4SxSrOAxBS1SeLtYb2EZR/jeO8EQ8jHVP6cTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/LNMDPLfbPj3DhPN6Hf/2ZdX/7md6AOBzBA8hgocQwUOI4CFE8BAieAgRPIQIHkIEDyGChxDBQ4jgIUTwECJ4CBE8hAgeQgQPIYKHEMFDiOAhRPAQIngIETyECB5CBA8hgocQwUOI4CFE8BAieAgRPIQIHkIEDyGChxDBQ4jgIUTwECJ4CBE8hAgeQgQPIYKHEMFDiOAhRPAQIngIETyECB5CBA8hgocQwUOI4CFE8BAieAgRPIQIHkIEDyGChxDBQ4jgIUTwECJ4CBE8hAgeQgQPIYKHEMFDiOAhRPAQIngIETyECB5CBA8hgocQwUOI4CFE8BAieAgRPIQIHkIEDyGChxDBQ4jgIUTwECJ4CBE8hAgeQgQPIYKHEMFDiOAhRPAQIngIETyECB5CBA8hgocQwUOI4CFE8BAieAgRPIQIHkIEDyGChxDBQ4jgIUTwECJ4CBE8hAgeQgQPIYKHEMFDiOAhRPAQIngIETyECB5CBA8hy/QAz+22T88AFTY8hAgeQgQPIYKHEMFDiOAhRPAQIngIETyECB5CBA8hgocQwUOI4CFE8BAieAgRPIQIHkIEDyGChxDBQ4jgIUTwECJ4CBE8hAgeQgQPIYKHEMFDiOAhRPAQIngIETyECB5CBA8hgocQwUOI4CFE8BAieAgRPIQIHkIEDyGChxDBQ4jgIUTwECJ4CBE8hAgeQgQPIYKHEMFDiOAhRPAQIngIETyECB5CBA8hgoeQ3+kBqs7rdZmegR4bHkIEDyGChxDBQ4jgIUTwECJ4CBE8hAgeQgQPIYKHEMFDiOAhRPAQ4nksSev9b5+eYYINDyGChxDBQ4jgIUTwECJ4CBE8hAgeQgQPIYKHEMFDiOAhRPAQIngIETyECB5CBA8hgocQwUOI4CFE8BDiai1J2+WxTM/wzpEXdW14CBE8hAgeQgQPIYKHEMFDiOAhRPAQIngIETyECB5CBA8hgocQwUOI4CHEe3iSjnxz/s1seAgRPIQIHkIEDyGChxDBQ4jgIUTwECJ4CBE8hAgeQgQPIYKHEMFDiOAhRPAQIngIETyECB5CBA8hgocQV2tJ2i6PZXqGd468qGvDQ4jgIUTwECJ4CBE8hAgeQgQPIYKHEMFDiOAhRPAQIngIETyECB5CBA8hgocQBzBIOvLIxDez4SFE8BAieAgRPIQIHkIEDyGChxDBQ4jgIUTwECJ4CBE8hAgeQgQPIYKHEMFDiOAhRPAQIngIETyECB5CBA8hL8mUHFaXWLxQAAAAAElFTkSuQmCC" alt="H3">
     <div class="text reveal">
       <span class="label">Ready for tomorrow</span>
-      <h2>Green ammonia.<br>Same H3.</h2>
+      <h2>Green ammonia.<br><span style="color:var(--charcoal);">Same H3.</span></h2>
       <p class="detail">As green ammonia becomes commercially available, customers can transition without replacing equipment, redesigning their process or changing how H3 operates.</p>
     </div>
   </div>
