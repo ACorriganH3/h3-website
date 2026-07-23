@@ -173,7 +173,8 @@
   /* ---------- APPLICATIONS ---------- */
   #applications{background:var(--white);color:var(--black);}
   #applications .label{color:var(--orange);}
-  #applications h2{font-size:clamp(32px,5vw,64px);max-width:820px;margin-bottom:64px;}
+  #applications h2{font-size:clamp(32px,5vw,64px);max-width:820px;margin-bottom:28px;}
+  #applications p.detail{font-size:16px;color:rgba(10,10,10,0.65);max-width:560px;line-height:1.6;margin-bottom:56px;}
   .app-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-dark);border:1px solid var(--line-dark);}
   @media(max-width:820px){.app-grid{grid-template-columns:1fr;}}
   .app-cell{background:var(--white);padding:48px 36px;transition:background .35s ease, transform .35s cubic-bezier(.16,1,.3,1), box-shadow .35s ease;}
@@ -212,6 +213,7 @@
   #contact{background:var(--orange);color:var(--black);min-height:72vh;}
   #contact .label{color:rgba(10,10,10,0.55);}
   #contact h2{font-size:clamp(42px,7.4vw,108px);max-width:900px;color:var(--black);}
+  #contact p.detail{margin-top:28px;font-size:16px;color:rgba(10,10,10,0.65);max-width:520px;line-height:1.6;}
   .contact-row{margin-top:52px;display:flex;align-items:center;gap:36px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:14px;}
   .contact-cta{
     display:inline-block;background:var(--black);color:var(--white);
@@ -279,7 +281,8 @@
     .app-cell h3{font-size:16px;margin-bottom:8px;}
     .app-cell p{font-size:12.5px;line-height:1.5;}
     .app-cell .num{font-size:10px;margin-bottom:14px;}
-    #applications h2{margin-bottom:36px;}
+    #applications h2{margin-bottom:20px;}
+    #applications p.detail{font-size:14.5px;margin-bottom:36px;}
 
     /* Problem section cost boxes: same treatment, kept
        narrower and quieter than the headline beside them */
@@ -406,6 +409,7 @@
   <div class="inner">
     <span class="label">Applications</span>
     <h2 class="reveal"><span style="color:var(--orange);">Industrial hydrogen.</span> <span style="color:var(--charcoal);">Without the logistics.</span></h2>
+    <p class="detail reveal">H3 installs and operates the system on your site. You pay only for the hydrogen you use, by the kilogram.</p>
     <div class="app-grid">
       <div class="app-cell reveal"><span class="num">01</span><h3>Semiconductor &amp; electronics</h3><p>Continuous process hydrogen demand, delivered without a tube-trailer fleet.</p></div>
       <div class="app-cell reveal"><span class="num">02</span><h3>Metal &amp; heat treatment</h3><p>On-site cracking replaces scheduled gas deliveries for industrial furnaces.</p></div>
@@ -437,12 +441,12 @@
       <div class="founder reveal">
         <h3>Alex Corrigan</h3>
         <span class="role">CEO &middot; Co-Founder</span>
-        <p>Former Managing Director of a hydrogen engineering team. Over ten years delivering first-of-a-kind hydrogen systems across industrial and transport applications.</p>
+        <p>Former Managing Director of a UK hydrogen technology and development centre. Over ten years delivering first-of-a-kind hydrogen systems across industrial and transport applications.</p>
       </div>
       <div class="founder reveal">
         <h3>George White</h3>
         <span class="role">CTO &middot; Co-Founder</span>
-        <p>Former Chief Engineer of a hydrogen engineering team. Over seven years designing and delivering pioneering hydrogen systems across marine and industrial applications.</p>
+        <p>Former Chief Engineer at a UK hydrogen technology and development centre. Over seven years designing and delivering pioneering hydrogen systems across marine and industrial applications.</p>
       </div>
     </div>
   </div>
@@ -453,6 +457,7 @@
   <div class="inner">
     <span class="label reveal">Get in touch</span>
     <h2 class="reveal">Let's do hydrogen differently.</h2>
+    <p class="detail reveal">We're speaking with industrial hydrogen users, technology partners and early-stage investors.</p>
     <div class="contact-row reveal">
       <a class="contact-cta" href="mailto:hello@h3.energy">hello@h3.energy</a>
       <a class="back-link" href="#hero">Back to top</a>
